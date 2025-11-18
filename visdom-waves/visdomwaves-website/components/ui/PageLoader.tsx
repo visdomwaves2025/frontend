@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, Suspense } from "react";
 import Image from "next/image";
 
 type LoaderContextValue = {
@@ -22,7 +22,8 @@ export const usePageLoader = () => {
 
 type Phase = "idle" | "loading" | "finishing";
 
-export function PageLoaderProvider({ children }: { children: React.ReactNode }) {
+// Wrapper component that uses useSearchParams
+function PageLoaderProviderInner({ children }: { children: React.ReactNode }) {
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<Phase>("idle");
   const pathname = usePathname();
@@ -287,6 +288,15 @@ export function PageLoaderProvider({ children }: { children: React.ReactNode }) 
       {children}
       <LoaderOverlay progress={progress} isVisible={isActive} />
     </PageLoaderContext.Provider>
+  );
+}
+
+// Export the main component with Suspense boundary
+export function PageLoaderProvider({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={children}>
+      <PageLoaderProviderInner>{children}</PageLoaderProviderInner>
+    </Suspense>
   );
 }
 
