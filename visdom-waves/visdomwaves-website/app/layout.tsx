@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from "@/lib/analytics";
+import { FloatingAssistant } from "@/components/ui/FloatingAssistant";
 import { PageLoaderProvider } from "@/components/ui/PageLoader";
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default function RootLayout({
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}
         <PageLoaderProvider>{children}</PageLoaderProvider>
+        <FloatingAssistant />
       </body>
     </html>
   );

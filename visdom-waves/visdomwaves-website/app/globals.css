@@ -74,8 +74,6 @@
 
   body {
     @apply font-body text-neutral-800 antialiased;
-    /* Enable GPU acceleration for smoother scrolling */
-    transform: translateZ(0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -176,5 +174,16 @@
 
   .mega-menu {
     @apply absolute top-full left-0 w-full bg-white shadow-2xl opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible;
+  }
+
+  /* Ensure floating assistant is always visible and fixed to viewport */
+  [data-floating-assistant="button"] {
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+  
+  [data-floating-assistant="panel"] {
+    position: fixed !important;
+    z-index: 99999 !important;
   }
 }

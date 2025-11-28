@@ -1,0 +1,5 @@
+[33ma9052f4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Add settings configuration for permissions and enhance PageLoader with Suspense support
+[33m8e181b5[m Update error handling in validation functions to use 'issues' instead of 'errors' for consistency with schema validation results.
+[33m87a478f[m Add performance optimizations, new loading indicator, and improved navigation
+[33m90c1bf2[m[33m ([m[1;31morigin/Eswar[m[33m)[m Initial commit: Visdomwaves website
+[33m33783fe[m Initial commit: Visdomwaves website

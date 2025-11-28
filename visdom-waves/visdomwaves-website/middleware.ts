@@ -19,8 +19,8 @@ export function middleware(request: NextRequest) {
     // Referrer policy
     'Referrer-Policy': 'strict-origin-when-cross-origin',
 
-    // Permissions policy
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    // Permissions policy - allow microphone for voice assistant feature
+    'Permissions-Policy': 'camera=(), microphone=(self), geolocation=()',
 
     // Content Security Policy
     'Content-Security-Policy': [
