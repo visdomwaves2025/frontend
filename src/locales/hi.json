@@ -1,0 +1,12 @@
+{
+  "login": {
+    "title": "साइन इन करें",
+    "username": "उपयोगकर्ता नाम",
+    "password": "पासवर्ड",
+    "login": "लॉग इन करें",
+    "loggingIn": "लॉग इन हो रहा है...",
+    "error": "लॉगिन विफल",
+    "passwordLogin": "Password Login",
+    "faceLogin": "Face Login"
+  }
+}

@@ -1,0 +1,9 @@
+.login-bg{
+    background: url(../../assets/login-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul[role="tablist"] > li > div.z-20 {
+  z-index: 50 !important;
+}
