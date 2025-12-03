@@ -1,0 +1,12 @@
+{
+  "login": {
+    "title": "Sign In",
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "loggingIn": "Logging in...",
+    "error": "Login failed",
+    "passwordLogin": "Password Login",
+    "faceLogin": "Face Login"
+  }
+}
