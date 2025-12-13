@@ -1,5 +1,12 @@
+import Home from '../Services/Home/Home.jsx'
+
 const EducationLandingPage = () => {
-    return <div>Welcome to the Education Landing Page</div>;
+    return (
+        <>
+            <Home />;
+        </>
+    )
+    
 };
 
 export default EducationLandingPage;

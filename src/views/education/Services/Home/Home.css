@@ -1,0 +1,272 @@
+/* ========================================== */
+/* Hero Section with Video Background */
+.hero-section {
+  position: relative;
+  color: #fff;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero Background Video */
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.6); /* darken video for readability */
+}
+
+/* Overlay for text readability */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure the container content is above overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-top: 50px;
+}
+
+/* Targeting the green text portion */
+.multilingual-text {
+  color: #17c884; /* green accent */
+}
+
+/* Hero Description */
+.hero-description {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  max-width: 550px;
+}
+
+/* --- Enroll Button Group Styling --- */
+.hero-btn {
+  padding: 0.75rem 1.75rem;
+  border-radius: 25px; /* Pill shape */
+  background-color: #1e1e1e;
+  border-color: #1e1e1e;
+}
+
+/* Arrow Icon */
+.arrow-icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: #fff; /* White background */
+  border-radius: 50%; /* Circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.arrow-icon {
+  color: #1e1e1e; /* Dark arrow color */
+}
+
+/* --- Decorative Shapes Styling --- */
+.position-relative {
+  position: relative;
+}
+
+/* .shape-blob {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.85rem;
+  transform: rotate(-15deg);
+  z-index: 10;
+}
+
+.shape-blob-1 {
+  background-color: #007bff;
+  width: 150px; 
+  height: 100px;
+  border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
+  top: -50px;
+  left: 20px;
+} */
+
+.blob-text {
+  transform: rotate(15deg);
+  padding-top: 10px;
+}
+
+/* --- Image Gallery Styling --- */
+.image-gallery .gallery-img {
+  height: 250px; /* Fixed height */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.image-gallery {
+  padding-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  /* .shape-blob-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-150%) rotate(-15deg);
+  } */
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-gallery .gallery-img {
+    height: 200px;
+  }
+}
+
+/* ========================================== */
+/* Container to hold video and overlay */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden;
+}
+
+/* Background video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
+}
+
+/* Overlay content */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom : 200px;
+
+}
+
+.subtitle {
+  margin-top: 90px;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+/* ========================================== */
+/* Motivation Video Section */
+.motivation-video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240919/pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Video container */
+.video-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  border: 4px solid #ffc107; /* professional golden border */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: url();
+}
+
+/* Video styling */
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mute/Unmute button */
+.unmute-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px 18px;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.unmute-btn:hover {
+  background-color: #ffc107;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-wrapper {
+    width: 95%;
+  }
+
+  .unmute-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 14px;
+  }
+}

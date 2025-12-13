@@ -1,0 +1,48 @@
+/* Basic styles for the container and header */
+.container {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Styling the feature box */
+.feature-box {
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the images inside feature boxes */
+.image-box img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* Styling for the text below the images */
+.feature-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .feature-box {
+    margin-bottom: 20px;
+  }
+}
+

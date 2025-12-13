@@ -1,0 +1,60 @@
+/* Full-page background with professional overlay */
+.studentlover-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://t4.ftcdn.net/jpg/01/59/36/13/240_F_159361310_b45IDWsgcizXh3gzRI3SRmZyljJVG3eh.jpghttps://t3.ftcdn.net/jpg/06/24/90/56/240_F_624905687_6jgMrzI78toEYK9Vkp0rB5u2hOKJQXR3.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Statistics */
+.stats-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stats-row p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Student Card */
+.student-card {
+  background-color: #ffffffdd; /* Semi-transparent white for better readability */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Student Image */
+.student-img img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* Carousel text */
+.carousel-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.carousel-item strong {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Carousel controls customization */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* white icons on dark overlay */
+}

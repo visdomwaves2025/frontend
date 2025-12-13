@@ -1,0 +1,56 @@
+.footer-wrapper {
+  background-image: url('https://t4.ftcdn.net/jpg/02/16/71/83/240_F_216718348_gaPKdBakjMEg3uhfX7hRSjXkjaLdXpb3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-links li {
+  font-size: 15px;
+  line-height: 2;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.footer-links li:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+
+.footer-globe {
+  font-size: 26px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-socials i {
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.footer-socials i:hover {
+  opacity: 1;
+}

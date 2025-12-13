@@ -1,0 +1,240 @@
+/* ============================
+🌟 PREMIUM MODERN NAVBAR (SaaS Style)
+============================ */
+
+.pro-navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* background: rgba(20, 20, 20, 0.65); */
+  background-image: url('https://t4.ftcdn.net/jpg/01/28/98/53/240_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg');
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 2000;
+}
+
+.nav-container {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 25px;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.nav-logo:hover {
+  color: #ffc107;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 28px;
+  position: relative;
+  z-index: 9;
+}
+
+.nav-menu li a {
+  color: #f0f0f0;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Underline Hover */
+.nav-menu li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ffc107;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffc107;
+}
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+⭐ ACCOUNT DROPDOWN (Click-to-Open)
+=========================== */
+
+.dropdown-auth {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-toggle {
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s;
+}
+
+.auth-toggle:hover {
+  color: #ffc107;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.auth-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: rgba(25, 25, 25, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  min-width: 150px;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.dropdown-auth.open .auth-dropdown {
+  display: flex;
+}
+
+.auth-dropdown a {
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.auth-dropdown a:hover {
+  background: rgba(255,193,7,0.12);
+  color: #ffc107;
+}
+
+/* ===========================
+📱 RESPONSIVE NAVBAR (MOBILE)
+=========================== */
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* ----- Mobile Breakpoint ----- */
+@media (max-width: 900px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(15,15,15,0.92);
+    backdrop-filter: blur(18px);
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 25px;
+    transition: 0.45s ease;
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    right: 0;
+  }
+
+  /* Hamburger to Cross */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+
+  /* Mobile Dropdown adjustments */
+  .auth-dropdown {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    display: flex;
+    background: rgba(20,20,20,0.85);
+  }
+
+  /* Disable hover logic on mobile */
+  .dropdown-auth:hover .auth-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+📄 GENERAL FIXES
+=========================== */
+
+/* Prevent content hidden below navbar */
+body {
+  padding-top: 80px !important;
+}
+
+/* Ensure dropdown is above everything */
+.auth-dropdown {
+  z-index: 9999 !important;
+}

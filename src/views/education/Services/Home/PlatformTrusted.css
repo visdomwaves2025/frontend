@@ -1,0 +1,132 @@
+/* =========================
+   SECTION
+========================= */
+.trusted-container {
+  padding: 80px 5%;
+  background-image: url("https://t4.ftcdn.net/jpg/06/93/58/53/240_F_693585364_7GrlZV8O6xja556CTfeHvSTWgZwW0Wmd.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay for contrast */
+.trusted-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* =========================
+   HEADING
+========================= */
+.trusted-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.trusted-subtitle {
+  font-size: 17px;
+  color: #d0d0d0;
+  margin-top: 10px;
+  max-width: 680px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   CARD
+========================= */
+.trusted-card {
+  width: 100%;
+  max-width: 260px;
+  padding: 45px 25px;
+  margin-top: 20px;
+  border-radius: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background: var(--light-color);
+  color: #111;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.45s ease, box-shadow 0.45s ease, background 0.3s ease;
+}
+
+/* Hover effect with dark background switch */
+.trusted-card:hover {
+  transform: translateY(-14px) scale(1.03);
+  background: var(--dark-color);
+  color: #fff;
+  box-shadow: 0 35px 65px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   ICON
+========================= */
+.trusted-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9f43;
+  transition: color 0.3s ease;
+}
+
+.trusted-card:hover .trusted-icon {
+  color: #00d2ff;
+}
+
+/* =========================
+   TEXT
+========================= */
+.trusted-number {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.trusted-label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .trusted-title {
+    font-size: 30px;
+  }
+
+  .trusted-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .trusted-container {
+    padding: 60px 5%;
+  }
+
+  .trusted-title {
+    font-size: 26px;
+  }
+
+  .trusted-number {
+    font-size: 32px;
+  }
+
+  .trusted-icon {
+    font-size: 28px;
+  }
+}

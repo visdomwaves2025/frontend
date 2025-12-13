@@ -1,0 +1,71 @@
+.parenttrust-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://t4.ftcdn.net/jpg/01/59/36/13/240_F_159361310_b45IDWsgcizXh3gzRI3SRmZyljJVG3eh.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Statistics */
+.stats-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.stats-row p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Auto-scroll carousel */
+.auto-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin: 0 -10px; /* align with container padding */
+}
+.auto-carousel {
+  display: flex;
+  gap: 20px;
+  animation: scrollCarousel 20s linear infinite;
+}
+.parent-card {
+  flex: 0 0 300px;
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.parent-card:hover {
+  transform: translateY(-5px);
+}
+.parent-img img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+.carousel-item p, .parent-card p {
+  font-size: 1rem;
+  color: #333;
+}
+.parent-card strong {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Animation for continuous scroll */
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half because items are duplicated */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .parent-card { flex: 0 0 45%; }
+}
+@media (max-width: 768px) {
+  .parent-card { flex: 0 0 80%; }
+}
